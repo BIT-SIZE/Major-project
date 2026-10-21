@@ -1,0 +1,44 @@
+{
+  "benchmark_results": [
+    {
+      "model_name": "U-Net",
+      "status": "Trained",
+      "mean_iou": 0.2668,
+      "dice_coefficient": 0.3719,
+      "precision": 0.4639,
+      "recall": 0.4736,
+      "severity_mae_pct": 14.55,
+      "avg_inference_latency_ms": 76.14,
+      "parameter_count": "4,318,401",
+      "checkpoint_size_mb": 49.52,
+      "device": "cpu"
+    },
+    {
+      "model_name": "DeepLabV3+",
+      "status": "Trained",
+      "mean_iou": 0.4403,
+      "dice_coefficient": 0.5483,
+      "precision": 0.7217,
+      "recall": 0.5381,
+      "severity_mae_pct": 8.2,
+      "avg_inference_latency_ms": 81.1,
+      "parameter_count": "40,347,041",
+      "checkpoint_size_mb": 462.22,
+      "device": "cpu"
+    },
+    {
+      "model_name": "SegFormer-B0",
+      "status": "Trained",
+      "mean_iou": 0.202,
+      "dice_coefficient": 0.2964,
+      "precision": 0.2914,
+      "recall": 0.5495,
+      "severity_mae_pct": 28.46,
+      "avg_inference_latency_ms": 18.37,
+      "parameter_count": "3,711,329",
+      "checkpoint_size_mb": 42.67,
+      "device": "cpu"
+    }
+  ],
+  "generated_at": "2026-10-13 22:32:22"
+}

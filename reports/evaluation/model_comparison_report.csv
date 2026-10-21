@@ -1,0 +1,4 @@
+model_name,status,mean_iou,dice_coefficient,precision,recall,severity_mae_pct,avg_inference_latency_ms,parameter_count,checkpoint_size_mb,device
+U-Net,Trained,0.2668,0.3719,0.4639,0.4736,14.55,76.14,"4,318,401",49.52,cpu
+DeepLabV3+,Trained,0.4403,0.5483,0.7217,0.5381,8.2,81.1,"40,347,041",462.22,cpu
+SegFormer-B0,Trained,0.202,0.2964,0.2914,0.5495,28.46,18.37,"3,711,329",42.67,cpu

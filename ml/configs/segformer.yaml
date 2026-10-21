@@ -1,0 +1,19 @@
+model:
+  architecture: "segformer"
+  num_classes: 1
+
+dataset:
+  root_dir: "."
+  image_size: [256, 256]
+  batch_size: 8
+  num_workers: 0
+
+training:
+  epochs: 5
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  loss: "bce_dice"
+  optimizer: "adamw"
+  early_stopping_patience: 3
+  checkpoint_dir: "models/checkpoints"
+  reports_dir: "reports/training"

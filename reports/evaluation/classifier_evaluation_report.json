@@ -1,0 +1,16 @@
+{
+  "model_name": "EfficientNet-B0",
+  "checkpoint": "efficientnet_b0_best.pth",
+  "supported_classes": 114,
+  "test_samples_evaluated": 60,
+  "top1_accuracy_pct": 73.33,
+  "top3_accuracy_pct": 100.0,
+  "macro_precision": 0.6737,
+  "macro_recall": 0.5476,
+  "macro_f1": 0.5959,
+  "weighted_f1": 0.8007,
+  "avg_inference_latency_ms": 8.85,
+  "parameter_count": "4,153,582",
+  "checkpoint_size_mb": 48.01,
+  "device": "cpu"
+}

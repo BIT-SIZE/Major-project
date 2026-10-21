@@ -1,0 +1,44 @@
+{
+  "model_name": "deeplabv3plus",
+  "training_duration_seconds": 148.2,
+  "best_val_dice": 0.5402,
+  "final_metrics": {
+    "train_loss": 0.4625,
+    "val_loss": 0.4253,
+    "val_iou": 0.4214,
+    "val_dice": 0.5402,
+    "val_precision": 0.5509,
+    "val_recall": 0.6462,
+    "learning_rate": 0.0003
+  },
+  "history": {
+    "train_loss": [
+      0.6068,
+      0.4625
+    ],
+    "val_loss": [
+      0.4854,
+      0.4253
+    ],
+    "val_iou": [
+      0.3791,
+      0.4214
+    ],
+    "val_dice": [
+      0.5126,
+      0.5402
+    ],
+    "val_precision": [
+      0.5586,
+      0.5509
+    ],
+    "val_recall": [
+      0.5957,
+      0.6462
+    ],
+    "learning_rate": [
+      0.0003,
+      0.0003
+    ]
+  }
+}

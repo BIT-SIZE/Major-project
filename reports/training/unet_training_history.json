@@ -1,0 +1,58 @@
+{
+  "model_name": "unet",
+  "training_duration_seconds": 299.44,
+  "best_val_dice": 0.3069,
+  "final_metrics": {
+    "train_loss": 0.5195,
+    "val_loss": 0.5487,
+    "val_iou": 0.2064,
+    "val_dice": 0.297,
+    "val_precision": 0.3229,
+    "val_recall": 0.5414,
+    "learning_rate": 0.0005
+  },
+  "history": {
+    "train_loss": [
+      0.6598,
+      0.5411,
+      0.5163,
+      0.5195
+    ],
+    "val_loss": [
+      0.5666,
+      0.9167,
+      0.5037,
+      0.5487
+    ],
+    "val_iou": [
+      0.189,
+      0.1892,
+      0.2131,
+      0.2064
+    ],
+    "val_dice": [
+      0.276,
+      0.2751,
+      0.3069,
+      0.297
+    ],
+    "val_precision": [
+      0.2938,
+      0.2434,
+      0.3247,
+      0.3229
+    ],
+    "val_recall": [
+      0.5003,
+      0.6906,
+      0.5401,
+      0.5414
+    ],
+    "learning_rate": [
+      0.0005,
+      0.0005,
+      0.0005,
+      0.0005
+    ]
+  }
+}
