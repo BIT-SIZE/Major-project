@@ -7,12 +7,17 @@ from backend.app.db.database import get_db
 from backend.app.db.repository import PredictionRepository
 from backend.app.schemas.predictions import AnalyticsSummaryResponse
 
+from backend.app.core.security import get_current_user, AuthenticatedUser
+
 router = APIRouter()
 
 @router.get("/analytics/summary", response_model=AnalyticsSummaryResponse)
-def get_analytics(db: Session = Depends(get_db)):
+def get_analytics(
+    current_user: AuthenticatedUser = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     repo = PredictionRepository(db)
-    return repo.get_analytics()
+    return repo.get_analytics(user_id=current_user.id)
 
 
 @router.get("/dataset/summary")

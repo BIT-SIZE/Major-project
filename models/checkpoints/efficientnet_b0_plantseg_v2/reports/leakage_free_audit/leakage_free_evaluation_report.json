@@ -1,0 +1,148 @@
+{
+  "dataset_summary": {
+    "original_test_samples": 2295,
+    "duplicates_removed": 113,
+    "clean_test_samples": 2182,
+    "duplicate_percentage": 4.92
+  },
+  "metrics_comparison": {
+    "Test Accuracy": {
+      "original_old": "3.66%",
+      "original_new": "71.02%",
+      "clean_old": "3.85%",
+      "clean_new": "71.13%",
+      "clean_delta": 67.28,
+      "new_model_impact": 0.11
+    },
+    "Top-3 Accuracy": {
+      "original_old": "4.97%",
+      "original_new": "89.46%",
+      "clean_old": "5.22%",
+      "clean_new": "89.46%",
+      "clean_delta": 84.24,
+      "new_model_impact": 0.0
+    },
+    "Macro Precision": {
+      "original_old": 0.0013,
+      "original_new": 0.6337,
+      "clean_old": 0.0013,
+      "clean_new": 0.6412,
+      "clean_delta": 0.6399,
+      "new_model_impact": 0.0075
+    },
+    "Macro Recall": {
+      "original_old": 0.0257,
+      "original_new": 0.5969,
+      "clean_old": 0.0259,
+      "clean_new": 0.6029,
+      "clean_delta": 0.577,
+      "new_model_impact": 0.006
+    },
+    "Macro F1": {
+      "original_old": 0.0024,
+      "original_new": 0.5972,
+      "clean_old": 0.0025,
+      "clean_new": 0.6034,
+      "clean_delta": 0.6009,
+      "new_model_impact": 0.0062
+    },
+    "Weighted F1": {
+      "original_old": 0.0038,
+      "original_new": 0.6969,
+      "clean_old": 0.0042,
+      "clean_new": 0.6981,
+      "clean_delta": 0.6939,
+      "new_model_impact": 0.0012
+    },
+    "Bell Pepper Blossom End Rot Recall": {
+      "original_old": 0.0,
+      "original_new": 1.0,
+      "clean_old": 0.0,
+      "clean_new": 1.0,
+      "clean_delta": 1.0,
+      "new_model_impact": 0.0
+    },
+    "Bell Pepper Blossom End Rot F1": {
+      "original_old": 0.0,
+      "original_new": 0.9565217391304348,
+      "clean_old": 0.0,
+      "clean_new": 0.9545454545454546,
+      "clean_delta": 0.9545,
+      "new_model_impact": -0.002
+    }
+  },
+  "bell_pepper_analysis": {
+    "Bell Pepper Bacterial Spot": {
+      "class_index": 14,
+      "clean_test_images": 14,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 14,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 8,
+        "incorrect": 6,
+        "precision": 0.7273,
+        "recall": 0.5714,
+        "f1_score": 0.64
+      }
+    },
+    "Bell Pepper Blossom End Rot": {
+      "class_index": 15,
+      "clean_test_images": 21,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 21,
+        "incorrect": 0,
+        "precision": 0.913,
+        "recall": 1.0,
+        "f1_score": 0.9545
+      }
+    },
+    "Bell Pepper Frogeye Leaf Spot": {
+      "class_index": 16,
+      "clean_test_images": 6,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      }
+    },
+    "Bell Pepper Powdery Mildew": {
+      "class_index": 17,
+      "clean_test_images": 6,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 1,
+        "incorrect": 5,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1_score": 0.2222
+      }
+    }
+  }
+}

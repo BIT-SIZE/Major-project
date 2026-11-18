@@ -97,7 +97,9 @@ def get_dataloaders(
     root_dir: str = ".",
     image_size=(256, 256),
     batch_size: int = 8,
-    num_workers: int = 0,
+    num_workers: int = 2,
+    pin_memory: Optional[bool] = None,
+    persistent_workers: Optional[bool] = None,
     max_train_samples: Optional[int] = None,
     max_val_samples: Optional[int] = None,
     max_test_samples: Optional[int] = None
@@ -105,6 +107,11 @@ def get_dataloaders(
     """
     Constructs PyTorch DataLoaders for train, val, and test splits.
     """
+    if pin_memory is None:
+        pin_memory = torch.cuda.is_available()
+    if persistent_workers is None:
+        persistent_workers = (num_workers > 0)
+
     train_transforms = SegmentationTransforms(image_size=image_size, is_train=True)
     eval_transforms = SegmentationTransforms(image_size=image_size, is_train=False)
 
@@ -112,9 +119,17 @@ def get_dataloaders(
     val_ds = PlantSegDataset(root_dir=root_dir, split="val", transforms=eval_transforms, max_samples=max_val_samples)
     test_ds = PlantSegDataset(root_dir=root_dir, split="test", transforms=eval_transforms, max_samples=max_test_samples)
 
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, num_workers=num_workers, pin_memory=False)
-    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, num_workers=num_workers, pin_memory=False)
-    test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False, num_workers=num_workers, pin_memory=False)
+    loader_kwargs = {
+        "batch_size": batch_size,
+        "num_workers": num_workers,
+        "pin_memory": pin_memory,
+    }
+    if num_workers > 0:
+        loader_kwargs["persistent_workers"] = persistent_workers
+
+    train_loader = DataLoader(train_ds, shuffle=True, **loader_kwargs)
+    val_loader = DataLoader(val_ds, shuffle=False, **loader_kwargs)
+    test_loader = DataLoader(test_ds, shuffle=False, **loader_kwargs)
 
     return {
         "train": train_loader,

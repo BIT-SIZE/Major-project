@@ -1,0 +1,120 @@
+                                           precision    recall  f1-score   support
+
+                          apple black rot       0.64      0.53      0.58        17
+                       apple mosaic virus       0.65      0.83      0.73        18
+                               apple rust       0.67      0.43      0.52        28
+                               apple scab       0.63      0.79      0.70        52
+                       banana anthracnose       0.75      0.86      0.80        14
+                 banana black leaf streak       0.84      0.97      0.90        33
+                        banana bunchy top       0.89      1.00      0.94        31
+                     banana cigar end rot       0.82      0.75      0.78        12
+                 banana cordana leaf spot       0.82      0.82      0.82        11
+                    banana panama disease       1.00      0.77      0.87        13
+                       basil downy mildew       0.92      0.92      0.92        13
+                         bean halo blight       0.75      0.27      0.40        11
+                        bean mosaic virus       0.50      0.33      0.40        12
+                                bean rust       0.62      0.70      0.66        47
+               bell pepper bacterial spot       0.75      0.60      0.67        15
+              bell pepper blossom end rot       0.92      1.00      0.96        22
+            bell pepper frogeye leaf spot       0.00      0.00      0.00         6
+               bell pepper powdery mildew       0.33      0.17      0.22         6
+                    blueberry anthracnose       0.50      0.75      0.60         8
+                blueberry botrytis blight       0.33      0.43      0.38         7
+                    blueberry mummy berry       0.71      0.56      0.62         9
+                           blueberry rust       0.80      0.44      0.57         9
+                         blueberry scorch       0.50      0.44      0.47         9
+            broccoli alternaria leaf spot       0.36      0.31      0.33        13
+                    broccoli downy mildew       1.00      0.17      0.29         6
+                       broccoli ring spot       0.00      0.00      0.00         3
+             cabbage alternaria leaf spot       0.29      0.31      0.30        13
+                        cabbage black rot       0.80      0.92      0.86        26
+                     cabbage downy mildew       0.71      0.71      0.71        17
+            carrot alternaria leaf blight       0.69      0.92      0.79        12
+                       carrot cavity spot       0.88      1.00      0.93        14
+            carrot cercospora leaf blight       0.50      0.75      0.60         4
+         cauliflower alternaria leaf spot       0.25      0.36      0.30        11
+           cauliflower bacterial soft rot       1.00      0.86      0.92         7
+                       celery anthracnose       0.67      0.33      0.44         6
+                      celery early blight       0.50      0.29      0.36         7
+                         cherry leaf spot       0.52      0.52      0.52        21
+                    cherry powdery mildew       0.67      0.57      0.62         7
+                            citrus canker       0.83      0.97      0.89        78
+                  citrus greening disease       0.69      0.74      0.71        27
+                      coffee berry blotch       0.71      0.83      0.77        24
+                         coffee black rot       0.00      0.00      0.00         1
+                    coffee brown eye spot       0.00      0.00      0.00         4
+                         coffee leaf rust       0.81      0.91      0.85        32
+                      corn gray leaf spot       0.69      0.52      0.59        21
+                corn northern leaf blight       0.71      0.77      0.74        26
+                                corn rust       0.87      0.77      0.82        35
+                                corn smut       0.88      0.95      0.92        40
+               cucumber angular leaf spot       0.69      0.81      0.74        36
+                  cucumber bacterial wilt       0.58      0.64      0.61        22
+                  cucumber powdery mildew       0.67      0.68      0.68        38
+            eggplant cercospora leaf spot       0.83      0.42      0.56        12
+             eggplant phomopsis fruit rot       0.67      0.89      0.76         9
+             eggplant phytophthora blight       0.33      0.14      0.20         7
+                       garlic leaf blight       0.65      0.61      0.63        18
+                              garlic rust       0.64      0.67      0.65        21
+                         ginger leaf spot       1.00      0.60      0.75         5
+                     ginger sheath blight       0.36      0.29      0.32        14
+                          grape black rot       0.80      0.83      0.82        24
+                       grape downy mildew       0.75      0.86      0.80        56
+                          grape leaf spot       0.80      0.22      0.35        18
+               grapevine leafroll disease       0.80      0.57      0.67        14
+                     lettuce downy mildew       0.60      0.71      0.65        17
+                     lettuce mosaic virus       0.80      0.50      0.62         8
+                           maple tar spot       0.86      0.78      0.82        23
+                        peach anthracnose       0.00      0.00      0.00         3
+                          peach brown rot       0.82      0.80      0.81        35
+                          peach leaf curl       0.89      0.94      0.92        36
+                               peach rust       0.00      0.00      0.00         2
+                               peach scab       0.82      0.88      0.85        16
+                      plum bacterial spot       0.00      0.00      0.00         3
+                           plum brown rot       0.70      0.88      0.78        16
+                      plum pocket disease       0.80      0.36      0.50        11
+                           plum pox virus       0.75      0.43      0.55         7
+                                plum rust       0.60      0.43      0.50         7
+                      potato early blight       0.48      0.56      0.52        25
+                       potato late blight       0.63      0.83      0.72        23
+                    raspberry fire blight       0.71      0.71      0.71         7
+                      raspberry gray mold       1.00      0.38      0.55         8
+                      raspberry leaf spot       0.00      0.00      0.00         3
+                    raspberry yellow rust       0.83      0.71      0.77         7
+                               rice blast       0.56      0.82      0.67        17
+                       rice sheath blight       0.44      0.93      0.60        15
+                 soybean bacterial blight       0.61      0.78      0.68        18
+                       soybean brown spot       0.88      0.50      0.64        14
+                     soybean downy mildew       0.78      0.81      0.79        31
+               soybean frog eye leaf spot       0.77      0.85      0.81        48
+                           soybean mosaic       0.83      0.65      0.73        23
+                    squash powdery mildew       0.48      0.31      0.37        36
+                   strawberry anthracnose       0.83      0.83      0.83        12
+                   strawberry leaf scorch       0.50      0.88      0.64         8
+                        tobacco blue mold       0.54      0.58      0.56        12
+                       tobacco brown spot       0.50      0.15      0.24        13
+                tobacco frogeye leaf spot       0.00      0.00      0.00         6
+                     tobacco mosaic virus       0.45      0.62      0.53         8
+               tomato bacterial leaf spot       0.60      0.55      0.57        22
+                      tomato early blight       0.61      0.73      0.67        37
+                       tomato late blight       0.71      0.73      0.72        33
+                         tomato leaf mold       0.88      0.74      0.81        31
+                      tomato mosaic virus       0.56      0.38      0.45        13
+                tomato septoria leaf spot       0.54      0.50      0.52        26
+            tomato yellow leaf curl virus       0.67      0.84      0.74        19
+wheat bacterial leaf streak (black chaff)       0.25      0.17      0.21        23
+                          wheat head scab       0.89      0.97      0.93        64
+                          wheat leaf rust       0.67      0.62      0.64        26
+                         wheat loose smut       0.95      0.91      0.93        43
+                     wheat powdery mildew       0.87      0.85      0.86        54
+                    wheat septoria blotch       0.62      0.63      0.62        46
+                          wheat stem rust       0.92      0.77      0.84        30
+                        wheat stripe rust       0.82      0.89      0.85        72
+                  zucchini bacterial wilt       0.60      0.40      0.48        15
+                    zucchini downy mildew       0.50      0.22      0.31         9
+                  zucchini powdery mildew       0.50      0.63      0.56        43
+             zucchini yellow mosaic virus       0.67      0.84      0.74        19
+
+                                 accuracy                           0.71      2295
+                                macro avg       0.63      0.60      0.60      2295
+                             weighted avg       0.71      0.71      0.70      2295

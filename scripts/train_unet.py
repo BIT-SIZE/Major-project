@@ -20,6 +20,7 @@ def parse_args():
     parser.add_argument("--epochs", type=int, default=None)
     parser.add_argument("--batch-size", type=int, default=None)
     parser.add_argument("--lr", type=float, default=None)
+    parser.add_argument("--resume", type=str, default=None, help="Path to checkpoint to resume training from")
     parser.add_argument("--max-train-samples", type=int, default=None)
     parser.add_argument("--max-val-samples", type=int, default=None)
     parser.add_argument("--image-size", type=int, default=256)
@@ -51,7 +52,7 @@ def main():
         root_dir=str(ROOT_DIR),
         image_size=img_size,
         batch_size=batch_size,
-        num_workers=config["dataset"].get("num_workers", 0),
+        num_workers=config["dataset"].get("num_workers", 2),
         max_train_samples=args.max_train_samples,
         max_val_samples=args.max_val_samples
     )
@@ -73,7 +74,10 @@ def main():
         model_name="unet",
         checkpoint_dir=str(ROOT_DIR / config["training"]["checkpoint_dir"]),
         reports_dir=str(ROOT_DIR / config["training"]["reports_dir"]),
-        early_stopping_patience=config["training"].get("early_stopping_patience", 3)
+        early_stopping_patience=config["training"].get("early_stopping_patience", 6),
+        use_amp=config["training"].get("use_amp", True),
+        grad_clip=config["training"].get("grad_clip", 1.0),
+        resume_path=args.resume
     )
 
     history = trainer.fit()

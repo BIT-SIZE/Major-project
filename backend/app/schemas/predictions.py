@@ -64,6 +64,7 @@ class PredictionResponse(BaseModel):
     segmentation_image_url: Optional[str] = None
     overlay_image_url: Optional[str] = None
     inference_time_ms: float = 0.0
+    storage_metadata: Optional[Dict[str, Any]] = None
     message: str
 
 class ClassifyResponse(BaseModel):

@@ -43,7 +43,11 @@ def test_models_comparison():
     assert "classification_benchmarks" in data
 
 def test_analytics_summary():
-    response = client.get("/api/analytics/summary")
+    # Protected endpoint requires authentication
+    unauth = client.get("/api/analytics/summary")
+    assert unauth.status_code == 401
+
+    response = client.get("/api/analytics/summary", headers={"Authorization": "Bearer test-mock-token"})
     assert response.status_code == 200
     data = response.json()
     assert "total_predictions" in data
@@ -74,18 +78,33 @@ def test_standalone_classify():
     assert len(data["top_predictions"]) >= 1
     assert data["model_name"] == "EfficientNet-B0"
 
+from unittest.mock import patch
+from backend.app.core.config import settings
+
+@patch.object(settings, "DATABASE_BACKEND", "sqlite")
 def test_predict_and_history_lifecycle():
-    # Create synthetic test image
+    # 0. Verify unauthenticated call is rejected
     img = Image.new("RGB", (100, 100), color=(34, 139, 34))
+    buf_unauth = io.BytesIO()
+    img.save(buf_unauth, format="JPEG")
+    buf_unauth.seek(0)
+    unauth_resp = client.post(
+        "/api/predict",
+        files={"file": ("test_leaf.jpg", buf_unauth, "image/jpeg")}
+    )
+    assert unauth_resp.status_code == 401
+
+    # 1. Post prediction with valid auth header
     buf = io.BytesIO()
     img.save(buf, format="JPEG")
     buf.seek(0)
+    auth_headers = {"Authorization": "Bearer test-mock-token"}
 
-    # 1. Post prediction
     response = client.post(
         "/api/predict",
         files={"file": ("test_leaf.jpg", buf, "image/jpeg")},
-        data={"model_name": "deeplabv3plus"}
+        data={"model_name": "deeplabv3plus"},
+        headers=auth_headers
     )
     assert response.status_code == 200
     pred = response.json()
@@ -110,8 +129,8 @@ def test_predict_and_history_lifecycle():
     assert "inference" in pred
     assert pred["inference"]["total_time_ms"] > 0
 
-    # 2. Check history
-    h_resp = client.get("/api/history")
+    # 2. Check history (scoped to authenticated user)
+    h_resp = client.get("/api/history", headers=auth_headers)
     assert h_resp.status_code == 200
     h_data = h_resp.json()
     assert h_data["total"] >= 1
@@ -119,13 +138,13 @@ def test_predict_and_history_lifecycle():
     assert pred_id in ids
 
     # 3. Get detail
-    d_resp = client.get(f"/api/history/{pred_id}")
+    d_resp = client.get(f"/api/history/{pred_id}", headers=auth_headers)
     assert d_resp.status_code == 200
     detail = d_resp.json()
     assert detail["id"] == pred_id
     assert detail["predicted_disease"] is not None
 
     # 4. Delete
-    del_resp = client.delete(f"/api/history/{pred_id}")
+    del_resp = client.delete(f"/api/history/{pred_id}", headers=auth_headers)
     assert del_resp.status_code == 200
     assert del_resp.json()["status"] == "success"

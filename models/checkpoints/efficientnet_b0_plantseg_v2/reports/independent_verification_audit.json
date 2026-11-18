@@ -1,0 +1,131 @@
+{
+  "checkpoint": {
+    "new_ckpt_exists": true,
+    "new_ckpt_size_bytes": 50342522,
+    "new_model_name": "EfficientNet-B0",
+    "new_epoch": 3,
+    "new_val_acc_top1": 69.53318864871294,
+    "new_val_loss": 1.4805968602498372,
+    "classifier_weight_shape": [
+      114,
+      1280
+    ],
+    "classifier_bias_shape": [
+      114
+    ],
+    "num_classes": 114,
+    "class_15_name": "bell pepper blossom end rot",
+    "mapping_matches_disease_classes_json": true,
+    "orig_ckpt_mtime": 1792150281.2462683,
+    "orig_ckpt_size_bytes": 50342522,
+    "orig_epoch": 3,
+    "orig_val_acc_top1": 57.5
+  },
+  "dataset_leakage": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "target_image": "bell_pepper_blossom_end_rot_Bing_0164.jpg",
+    "target_image_split": [
+      "Training"
+    ],
+    "brot_counts_by_split": {
+      "Training": 78,
+      "Test": 22,
+      "Validation": 12
+    },
+    "brot_filename_overlap": 0,
+    "brot_content_hash_overlap": 1
+  },
+  "training_duration": {
+    "total_epochs": 3,
+    "duration_seconds": 2065.93,
+    "val_loss_trend": [
+      -0.4307000000000001,
+      -0.26570000000000005
+    ],
+    "val_acc_trend": [
+      11.82,
+      7.850000000000001
+    ],
+    "is_val_loss_decreasing": true,
+    "is_val_acc_increasing": true,
+    "final_lr": 0.00025750000000000013
+  },
+  "minority_classes": {
+    "bell pepper bacterial spot": {
+      "class_index": 14,
+      "training_samples": 53,
+      "test_support": 15,
+      "correct_predictions": 9,
+      "recall": 0.6,
+      "precision": 0.75,
+      "confused_with_predictions": {
+        "cherry leaf spot (idx 36)": 1,
+        "citrus canker (idx 38)": 3,
+        "peach leaf curl (idx 67)": 1,
+        "tomato early blight (idx 96)": 1
+      },
+      "other_classes_predicted_as_this": {
+        "bell pepper frogeye leaf spot (idx 16)": 2,
+        "grape leaf spot (idx 60)": 1
+      }
+    },
+    "bell pepper blossom end rot": {
+      "class_index": 15,
+      "training_samples": 78,
+      "test_support": 22,
+      "correct_predictions": 22,
+      "recall": 1.0,
+      "precision": 0.9167,
+      "confused_with_predictions": {},
+      "other_classes_predicted_as_this": {
+        "bell pepper frogeye leaf spot (idx 16)": 1,
+        "peach brown rot (idx 66)": 1
+      }
+    },
+    "bell pepper frogeye leaf spot": {
+      "class_index": 16,
+      "training_samples": 21,
+      "test_support": 6,
+      "correct_predictions": 0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "confused_with_predictions": {
+        "bell pepper bacterial spot (idx 14)": 2,
+        "bell pepper blossom end rot (idx 15)": 1,
+        "bell pepper powdery mildew (idx 17)": 1,
+        "cherry leaf spot (idx 36)": 1,
+        "soybean frog eye leaf spot (idx 86)": 1
+      },
+      "other_classes_predicted_as_this": {}
+    },
+    "bell pepper powdery mildew": {
+      "class_index": 17,
+      "training_samples": 19,
+      "test_support": 6,
+      "correct_predictions": 1,
+      "recall": 0.1667,
+      "precision": 0.3333,
+      "confused_with_predictions": {
+        "apple scab (idx 3)": 1,
+        "basil downy mildew (idx 10)": 1,
+        "cherry powdery mildew (idx 37)": 1,
+        "citrus greening disease (idx 39)": 1,
+        "cucumber powdery mildew (idx 50)": 1
+      },
+      "other_classes_predicted_as_this": {
+        "bell pepper frogeye leaf spot (idx 16)": 1,
+        "cherry powdery mildew (idx 37)": 1
+      }
+    }
+  },
+  "evaluation_integrity": {
+    "total_test_samples": 2295,
+    "apple_classes_count_in_test": 115,
+    "expected_old_acc_pct": 5.01,
+    "reported_old_acc_pct": 3.66,
+    "explanation": "Old model was trained only on 4 Apple classes due to linear slicing. In the held-out test set of 2,295 images, exactly 84 images belong to these 4 Apple classes (84/2295 = 3.66%). The old model classified almost all test images into one of these 4 Apple classes."
+  },
+  "summary": "All checks completed."
+}

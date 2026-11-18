@@ -1,0 +1,175 @@
+{
+  "metrics": {
+    "Test Accuracy": {
+      "existing_model": "3.66%",
+      "new_model": "71.02%"
+    },
+    "Top-3 Accuracy": {
+      "existing_model": "4.97%",
+      "new_model": "89.46%"
+    },
+    "Macro Precision": {
+      "existing_model": 0.0013,
+      "new_model": 0.6337
+    },
+    "Macro Recall": {
+      "existing_model": 0.0257,
+      "new_model": 0.5969
+    },
+    "Macro F1": {
+      "existing_model": 0.0024,
+      "new_model": 0.5972
+    },
+    "Weighted F1": {
+      "existing_model": 0.0038,
+      "new_model": 0.6969
+    },
+    "Bell Pepper Blossom End Rot Recall": {
+      "existing_model": 0.0,
+      "new_model": 1.0
+    },
+    "Bell Pepper Blossom End Rot F1": {
+      "existing_model": 0.0,
+      "new_model": 0.9565217391304348
+    }
+  },
+  "bell_pepper_analysis": {
+    "Bell Pepper Bacterial Spot": {
+      "class_index": 14,
+      "test_images": 15,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 15,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 9,
+        "incorrect": 6,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1_score": 0.6667
+      }
+    },
+    "Bell Pepper Blossom End Rot": {
+      "class_index": 15,
+      "test_images": 22,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 22,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 22,
+        "incorrect": 0,
+        "precision": 0.9167,
+        "recall": 1.0,
+        "f1_score": 0.9565
+      }
+    },
+    "Bell Pepper Frogeye Leaf Spot": {
+      "class_index": 16,
+      "test_images": 6,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      }
+    },
+    "Bell Pepper Powdery Mildew": {
+      "class_index": 17,
+      "test_images": 6,
+      "old_model": {
+        "correct": 0,
+        "incorrect": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0
+      },
+      "new_model": {
+        "correct": 1,
+        "incorrect": 5,
+        "precision": 0.3333,
+        "recall": 0.1667,
+        "f1_score": 0.2222
+      }
+    }
+  },
+  "single_image_test": {
+    "image": "C:\\Users\\hiten\\Major Project\\plantseg\\plantsegv2\\images\\train\\bell_pepper_blossom_end_rot_Bing_0164.jpg",
+    "old_model": {
+      "image_path": "C:\\Users\\hiten\\Major Project\\plantseg\\plantsegv2\\images\\train\\bell_pepper_blossom_end_rot_Bing_0164.jpg",
+      "predicted_class_index": 0,
+      "predicted_class_name": "apple black rot",
+      "predicted_host": "Apple",
+      "predicted_disease": "apple black rot",
+      "confidence": 84.46,
+      "top3_predictions": [
+        {
+          "class_index": 0,
+          "class_name": "apple black rot",
+          "host": "Apple",
+          "disease": "apple black rot",
+          "confidence": 84.46
+        },
+        {
+          "class_index": 2,
+          "class_name": "apple rust",
+          "host": "Apple",
+          "disease": "apple rust",
+          "confidence": 9.64
+        },
+        {
+          "class_index": 3,
+          "class_name": "apple scab",
+          "host": "Apple",
+          "disease": "apple scab",
+          "confidence": 5.44
+        }
+      ]
+    },
+    "new_model": {
+      "image_path": "C:\\Users\\hiten\\Major Project\\plantseg\\plantsegv2\\images\\train\\bell_pepper_blossom_end_rot_Bing_0164.jpg",
+      "predicted_class_index": 15,
+      "predicted_class_name": "bell pepper blossom end rot",
+      "predicted_host": "Bell pepper",
+      "predicted_disease": "bell pepper blossom end rot",
+      "confidence": 96.61,
+      "top3_predictions": [
+        {
+          "class_index": 15,
+          "class_name": "bell pepper blossom end rot",
+          "host": "Bell pepper",
+          "disease": "bell pepper blossom end rot",
+          "confidence": 96.61
+        },
+        {
+          "class_index": 97,
+          "class_name": "tomato late blight",
+          "host": "Tomato",
+          "disease": "tomato late blight",
+          "confidence": 0.6
+        },
+        {
+          "class_index": 38,
+          "class_name": "citrus canker",
+          "host": "Citrus",
+          "disease": "citrus canker",
+          "confidence": 0.45
+        }
+      ]
+    }
+  }
+}

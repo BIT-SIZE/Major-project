@@ -1,0 +1,1699 @@
+{
+  "total_test_evaluated": 2295,
+  "duplicate_count": 113,
+  "clean_count": 2182,
+  "duplicates_by_disease": {
+    "wheat head scab": 11,
+    "wheat septoria blotch": 11,
+    "wheat stripe rust": 9,
+    "banana bunchy top": 6,
+    "soybean downy mildew": 5,
+    "soybean frog eye leaf spot": 5,
+    "tobacco brown spot": 5,
+    "cabbage alternaria leaf spot": 4,
+    "wheat stem rust": 4,
+    "cabbage black rot": 3,
+    "cauliflower alternaria leaf spot": 2,
+    "coffee berry blotch": 2,
+    "coffee brown eye spot": 2,
+    "ginger sheath blight": 2,
+    "peach scab": 2,
+    "soybean brown spot": 2,
+    "tobacco frogeye leaf spot": 2,
+    "tomato bacterial leaf spot": 2,
+    "wheat leaf rust": 2,
+    "wheat loose smut": 2,
+    "wheat powdery mildew": 2,
+    "zucchini powdery mildew": 2,
+    "banana black leaf streak": 1,
+    "banana cigar end rot": 1,
+    "banana cordana leaf spot": 1,
+    "bean mosaic virus": 1,
+    "bean rust": 1,
+    "bell pepper bacterial spot": 1,
+    "bell pepper blossom end rot": 1,
+    "blueberry scorch": 1,
+    "broccoli alternaria leaf spot": 1,
+    "citrus canker": 1,
+    "coffee black rot": 1,
+    "cucumber powdery mildew": 1,
+    "eggplant cercospora leaf spot": 1,
+    "grape downy mildew": 1,
+    "plum brown rot": 1,
+    "plum pox virus": 1,
+    "raspberry yellow rust": 1,
+    "rice sheath blight": 1,
+    "soybean bacterial blight": 1,
+    "soybean mosaic": 1,
+    "squash powdery mildew": 1,
+    "tobacco blue mold": 1,
+    "tomato early blight": 1,
+    "tomato septoria leaf spot": 1,
+    "tomato yellow leaf curl virus": 1,
+    "zucchini bacterial wilt": 1
+  },
+  "duplicates_by_plant": {
+    "Wheat": 41,
+    "Soybean": 14,
+    "Banana": 9,
+    "Tobacco": 8,
+    "Cabbage": 7,
+    "Coffee": 5,
+    "Tomato": 5,
+    "Zucchini": 3,
+    "Bean": 2,
+    "Bell pepper": 2,
+    "Cauliflower": 2,
+    "Ginger": 2,
+    "Peach": 2,
+    "Plum": 2,
+    "Blueberry": 1,
+    "Broccoli": 1,
+    "Citrus": 1,
+    "Cucumber": 1,
+    "Eggplant": 1,
+    "Grape": 1,
+    "Raspberry": 1,
+    "Rice": 1,
+    "Squash": 1
+  },
+  "duplicate_pairs": [
+    {
+      "test_image": "banana_black_leaf_streak_Bing_0013.jpg",
+      "test_disease": "banana black leaf streak",
+      "test_plant": "Banana",
+      "class_idx": 5,
+      "md5": "e02f7e25cad9b8e8ddfbc81698977d40",
+      "matching_train_images": [
+        {
+          "filename": "banana_black_leaf_streak_banana black sigatoka (54).jpg",
+          "disease": "banana black leaf streak",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0020.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "3cb47d8f8d50783c0ca8f9d24d81de28",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0062.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0100.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "d45adb8464680bc064fbc87426ce9b51",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0168.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0140.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "d56c535123c1a19421dcce019fb7e7a0",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0338.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0152.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "734719cce767053e2e41bd8d616e16d6",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0189.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0165.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "3cb47d8f8d50783c0ca8f9d24d81de28",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0062.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_bunchy_top_Bing_0334.jpg",
+      "test_disease": "banana bunchy top",
+      "test_plant": "Banana",
+      "class_idx": 6,
+      "md5": "e1602db63d38b38e69edd386748e27e1",
+      "matching_train_images": [
+        {
+          "filename": "banana_bunchy_top_Bing_0083.jpg",
+          "disease": "banana bunchy top",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_cigar_end_rot_Bing_0002.jpg",
+      "test_disease": "banana cigar end rot",
+      "test_plant": "Banana",
+      "class_idx": 7,
+      "md5": "0251ad19b65433696a01f07aa21197bd",
+      "matching_train_images": [
+        {
+          "filename": "banana_cigar_end_rot_Google_0010.jpg",
+          "disease": "banana cigar end rot",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "banana_cordana_leaf_spot_Baidu_0064.jpg",
+      "test_disease": "banana cordana leaf spot",
+      "test_plant": "Banana",
+      "class_idx": 8,
+      "md5": "2b7cc0b0531c6d3f0d573aa126fec720",
+      "matching_train_images": [
+        {
+          "filename": "banana_black_leaf_streak_Baidu_0080.jpg",
+          "disease": "banana black leaf streak",
+          "plant": "Banana"
+        }
+      ]
+    },
+    {
+      "test_image": "bean_mosaic_virus_30.jpg",
+      "test_disease": "bean mosaic virus",
+      "test_plant": "Bean",
+      "class_idx": 12,
+      "md5": "0187ea51a7e765edfc02691ce1f3c737",
+      "matching_train_images": [
+        {
+          "filename": "tomato_mosaic_virus_184.jpg",
+          "disease": "tomato mosaic virus",
+          "plant": "Tomato"
+        }
+      ]
+    },
+    {
+      "test_image": "bean_rust_google_0130.jpg",
+      "test_disease": "bean rust",
+      "test_plant": "Bean",
+      "class_idx": 13,
+      "md5": "41c00455916898b774b44e1752c2a85a",
+      "matching_train_images": [
+        {
+          "filename": "bean_rust_google_0030.jpg",
+          "disease": "bean rust",
+          "plant": "Bean"
+        }
+      ]
+    },
+    {
+      "test_image": "bell_pepper_bacterial_spot_Bing_0002.jpg",
+      "test_disease": "bell pepper bacterial spot",
+      "test_plant": "Bell pepper",
+      "class_idx": 14,
+      "md5": "8e94fe1c76cd8adb37be96861be5128c",
+      "matching_train_images": [
+        {
+          "filename": "bell_pepper_frogeye_leaf_spot_Bing_0011.jpg",
+          "disease": "bell pepper frogeye leaf spot",
+          "plant": "Bell pepper"
+        }
+      ]
+    },
+    {
+      "test_image": "bell_pepper_blossom_end_rot_Bing_0008.jpg",
+      "test_disease": "bell pepper blossom end rot",
+      "test_plant": "Bell pepper",
+      "class_idx": 15,
+      "md5": "58d326e55f0d9e695e207a247f0abce1",
+      "matching_train_images": [
+        {
+          "filename": "bell_pepper_blossom_end_rot_Google_0038.jpg",
+          "disease": "bell pepper blossom end rot",
+          "plant": "Bell pepper"
+        }
+      ]
+    },
+    {
+      "test_image": "blueberry_scorch_Bing_0011.jpg",
+      "test_disease": "blueberry scorch",
+      "test_plant": "Blueberry",
+      "class_idx": 22,
+      "md5": "e933eccb901b3a9cbca28089730981bc",
+      "matching_train_images": [
+        {
+          "filename": "blueberry_scorch_Google_0081.jpg",
+          "disease": "blueberry scorch",
+          "plant": "Blueberry"
+        }
+      ]
+    },
+    {
+      "test_image": "broccoli_alternaria_leaf_spot_Google_0005.jpg",
+      "test_disease": "broccoli alternaria leaf spot",
+      "test_plant": "Broccoli",
+      "class_idx": 23,
+      "md5": "50aa506f6cdf621cd35cc5915ac4de5f",
+      "matching_train_images": [
+        {
+          "filename": "broccoli_alternaria_leaf_spot_Bing_0012.jpg",
+          "disease": "broccoli alternaria leaf spot",
+          "plant": "Broccoli"
+        },
+        {
+          "filename": "broccoli_ring_spot_Bing_0054.jpg",
+          "disease": "broccoli ring spot",
+          "plant": "Broccoli"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_alternaria_leaf_spot_google_0026.jpg",
+      "test_disease": "cabbage alternaria leaf spot",
+      "test_plant": "Cabbage",
+      "class_idx": 26,
+      "md5": "41cfa46c2cf803c930e503e00d9d88c4",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0021.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_alternaria_leaf_spot_google_0128.jpg",
+      "test_disease": "cabbage alternaria leaf spot",
+      "test_plant": "Cabbage",
+      "class_idx": 26,
+      "md5": "12ed0f89678802e424508a634931101d",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0222.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_alternaria_leaf_spot_google_0148.jpg",
+      "test_disease": "cabbage alternaria leaf spot",
+      "test_plant": "Cabbage",
+      "class_idx": 26,
+      "md5": "3158e32c6d472ac4b18cdad1ce77c079",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0230.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_alternaria_leaf_spot_google_0206.jpg",
+      "test_disease": "cabbage alternaria leaf spot",
+      "test_plant": "Cabbage",
+      "class_idx": 26,
+      "md5": "5bcfc97fc6f14eb33976415d31285dd7",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0234.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_black_rot_Bing_0015.jpg",
+      "test_disease": "cabbage black rot",
+      "test_plant": "Cabbage",
+      "class_idx": 27,
+      "md5": "edd4f4fda168fe1c626ab2cb501218d0",
+      "matching_train_images": [
+        {
+          "filename": "cabbage_black_rot_Google_0232.jpg",
+          "disease": "cabbage black rot",
+          "plant": "Cabbage"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_black_rot_Google_0110.jpg",
+      "test_disease": "cabbage black rot",
+      "test_plant": "Cabbage",
+      "class_idx": 27,
+      "md5": "03672baf1a488539501ffaa8f151c7d5",
+      "matching_train_images": [
+        {
+          "filename": "cabbage_black_rot_Bing_0013.jpg",
+          "disease": "cabbage black rot",
+          "plant": "Cabbage"
+        }
+      ]
+    },
+    {
+      "test_image": "cabbage_black_rot_Google_0208.jpg",
+      "test_disease": "cabbage black rot",
+      "test_plant": "Cabbage",
+      "class_idx": 27,
+      "md5": "143a4d10d24906b0ef7d51c8cc0f8612",
+      "matching_train_images": [
+        {
+          "filename": "cabbage_black_rot_Bing_0149.jpg",
+          "disease": "cabbage black rot",
+          "plant": "Cabbage"
+        }
+      ]
+    },
+    {
+      "test_image": "cauliflower_alternaria_leaf_spot_google_0028.jpg",
+      "test_disease": "cauliflower alternaria leaf spot",
+      "test_plant": "Cauliflower",
+      "class_idx": 32,
+      "md5": "0aec7e4080ae92fcbaefffc8ab070169",
+      "matching_train_images": [
+        {
+          "filename": "cabbage_alternaria_leaf_spot_google_0013.jpg",
+          "disease": "cabbage alternaria leaf spot",
+          "plant": "Cabbage"
+        }
+      ]
+    },
+    {
+      "test_image": "cauliflower_alternaria_leaf_spot_google_0061.jpg",
+      "test_disease": "cauliflower alternaria leaf spot",
+      "test_plant": "Cauliflower",
+      "class_idx": 32,
+      "md5": "4ea5276e9f1fa20d6d4a3cfe909485bb",
+      "matching_train_images": [
+        {
+          "filename": "cabbage_alternaria_leaf_spot_google_0075.jpg",
+          "disease": "cabbage alternaria leaf spot",
+          "plant": "Cabbage"
+        }
+      ]
+    },
+    {
+      "test_image": "citrus_canker_276.jpg",
+      "test_disease": "citrus canker",
+      "test_plant": "Citrus",
+      "class_idx": 38,
+      "md5": "3e3955fd4a99ec4fb1429c8fd7c61305",
+      "matching_train_images": [
+        {
+          "filename": "citrus_canker_279.jpg",
+          "disease": "citrus canker",
+          "plant": "Citrus"
+        }
+      ]
+    },
+    {
+      "test_image": "coffee_berry_blotch_Bing_0049.jpg",
+      "test_disease": "coffee berry blotch",
+      "test_plant": "Coffee",
+      "class_idx": 40,
+      "md5": "a454d37f155a7ffaa61303d3f8d21953",
+      "matching_train_images": [
+        {
+          "filename": "coffee_berry_blotch_Google_0021.jpg",
+          "disease": "coffee berry blotch",
+          "plant": "Coffee"
+        }
+      ]
+    },
+    {
+      "test_image": "coffee_berry_blotch_Bing_0117.jpg",
+      "test_disease": "coffee berry blotch",
+      "test_plant": "Coffee",
+      "class_idx": 40,
+      "md5": "770789dc183d054636ae07ac726728f1",
+      "matching_train_images": [
+        {
+          "filename": "coffee_brown_eye_spot_Bing_0009.jpg",
+          "disease": "coffee brown eye spot",
+          "plant": "Coffee"
+        }
+      ]
+    },
+    {
+      "test_image": "coffee_black_rot_Bing_0001.jpg",
+      "test_disease": "coffee black rot",
+      "test_plant": "Coffee",
+      "class_idx": 41,
+      "md5": "b75480e58b08d45d04834365175b9a0a",
+      "matching_train_images": [
+        {
+          "filename": "coffee_berry_blotch_Bing_0069.jpg",
+          "disease": "coffee berry blotch",
+          "plant": "Coffee"
+        }
+      ]
+    },
+    {
+      "test_image": "coffee_brown_eye_spot_Bing_0006.jpg",
+      "test_disease": "coffee brown eye spot",
+      "test_plant": "Coffee",
+      "class_idx": 42,
+      "md5": "22e694652b9ecca2262289a65abe880b",
+      "matching_train_images": [
+        {
+          "filename": "coffee_brown_eye_spot_Google_0034.jpg",
+          "disease": "coffee brown eye spot",
+          "plant": "Coffee"
+        }
+      ]
+    },
+    {
+      "test_image": "coffee_brown_eye_spot_Google_0003.jpg",
+      "test_disease": "coffee brown eye spot",
+      "test_plant": "Coffee",
+      "class_idx": 42,
+      "md5": "4baf3d251c9bdb99d2205dd6d62684e5",
+      "matching_train_images": [
+        {
+          "filename": "coffee_berry_blotch_Google_0026.jpg",
+          "disease": "coffee berry blotch",
+          "plant": "Coffee"
+        }
+      ]
+    },
+    {
+      "test_image": "cucumber_powdery_mildew_google_0026.jpg",
+      "test_disease": "cucumber powdery mildew",
+      "test_plant": "Cucumber",
+      "class_idx": 50,
+      "md5": "14ca5148d1ff0d2d30726393e78887a8",
+      "matching_train_images": [
+        {
+          "filename": "squash_powdery_mildew_google_0192.jpg",
+          "disease": "squash powdery mildew",
+          "plant": "Squash"
+        }
+      ]
+    },
+    {
+      "test_image": "eggplant_cercospora_leaf_spot_google_0030.jpg",
+      "test_disease": "eggplant cercospora leaf spot",
+      "test_plant": "Eggplant",
+      "class_idx": 51,
+      "md5": "583c5e18c7af3566230db7987e1dc6a2",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0056.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "ginger_sheath_blight_30.jpg",
+      "test_disease": "ginger sheath blight",
+      "test_plant": "Ginger",
+      "class_idx": 57,
+      "md5": "5e4b740086187f62b4fb12f3466d7cbd",
+      "matching_train_images": [
+        {
+          "filename": "rice_sheath_blight_20.jpg",
+          "disease": "rice sheath blight",
+          "plant": "Rice"
+        }
+      ]
+    },
+    {
+      "test_image": "ginger_sheath_blight_google_0007.jpg",
+      "test_disease": "ginger sheath blight",
+      "test_plant": "Ginger",
+      "class_idx": 57,
+      "md5": "a4b9c9bc696d6f0f5986358eb89dcd96",
+      "matching_train_images": [
+        {
+          "filename": "rice_sheath_blight_google_0028.jpg",
+          "disease": "rice sheath blight",
+          "plant": "Rice"
+        }
+      ]
+    },
+    {
+      "test_image": "grape_downy_mildew_241.jpg",
+      "test_disease": "grape downy mildew",
+      "test_plant": "Grape",
+      "class_idx": 59,
+      "md5": "2e40141bcec55909eed169f5b820f603",
+      "matching_train_images": [
+        {
+          "filename": "grape_downy_mildew_122.jpg",
+          "disease": "grape downy mildew",
+          "plant": "Grape"
+        }
+      ]
+    },
+    {
+      "test_image": "peach_scab_Bing_0192.jpg",
+      "test_disease": "peach scab",
+      "test_plant": "Peach",
+      "class_idx": 69,
+      "md5": "93f6c741dde5f6eb071fbd689a27f5b7",
+      "matching_train_images": [
+        {
+          "filename": "peach_scab_Google_0239.jpg",
+          "disease": "peach scab",
+          "plant": "Peach"
+        }
+      ]
+    },
+    {
+      "test_image": "peach_scab_Bing_0223.jpg",
+      "test_disease": "peach scab",
+      "test_plant": "Peach",
+      "class_idx": 69,
+      "md5": "20775ae5d1e073db18b49db0f428839a",
+      "matching_train_images": [
+        {
+          "filename": "peach_scab_Bing_0253.jpg",
+          "disease": "peach scab",
+          "plant": "Peach"
+        }
+      ]
+    },
+    {
+      "test_image": "plum_brown_rot_Bing_0079.jpg",
+      "test_disease": "plum brown rot",
+      "test_plant": "Plum",
+      "class_idx": 71,
+      "md5": "d8ceee43e674254ef749465c928373ae",
+      "matching_train_images": [
+        {
+          "filename": "peach_brown_rot_Google_0260.jpg",
+          "disease": "peach brown rot",
+          "plant": "Peach"
+        }
+      ]
+    },
+    {
+      "test_image": "plum_pox_virus_Google_0040.jpg",
+      "test_disease": "plum pox virus",
+      "test_plant": "Plum",
+      "class_idx": 73,
+      "md5": "ac76352155f9d77a46107bf4cb80c684",
+      "matching_train_images": [
+        {
+          "filename": "plum_pox_virus_Bing_0074.jpg",
+          "disease": "plum pox virus",
+          "plant": "Plum"
+        }
+      ]
+    },
+    {
+      "test_image": "raspberry_yellow_rust_Bing_0010.jpg",
+      "test_disease": "raspberry yellow rust",
+      "test_plant": "Raspberry",
+      "class_idx": 80,
+      "md5": "3a263e283d50dff7507eb0fb9ddd9f12",
+      "matching_train_images": [
+        {
+          "filename": "raspberry_yellow_rust_Google_0013.jpg",
+          "disease": "raspberry yellow rust",
+          "plant": "Raspberry"
+        }
+      ]
+    },
+    {
+      "test_image": "rice_sheath_blight_52.jpg",
+      "test_disease": "rice sheath blight",
+      "test_plant": "Rice",
+      "class_idx": 82,
+      "md5": "b4598f14e8e0a60a9979a93ec46ff7f2",
+      "matching_train_images": [
+        {
+          "filename": "ginger_sheath_blight_26.jpg",
+          "disease": "ginger sheath blight",
+          "plant": "Ginger"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_bacterial_blight_Bing_0105.jpg",
+      "test_disease": "soybean bacterial blight",
+      "test_plant": "Soybean",
+      "class_idx": 83,
+      "md5": "c614e8b457f4c4651793dc04cd3295b5",
+      "matching_train_images": [
+        {
+          "filename": "soybean_brown_spot_Bing_0046.jpg",
+          "disease": "soybean brown spot",
+          "plant": "Soybean"
+        },
+        {
+          "filename": "soybean_brown_spot_Bing_0070.jpg",
+          "disease": "soybean brown spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_brown_spot_Baidu_0009.jpg",
+      "test_disease": "soybean brown spot",
+      "test_plant": "Soybean",
+      "class_idx": 84,
+      "md5": "c159ecb7ebca1fe806cfdab22492de53",
+      "matching_train_images": [
+        {
+          "filename": "soybean_bacterial_blight_Baidu_0000.jpg",
+          "disease": "soybean bacterial blight",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_brown_spot_Bing_0229.jpg",
+      "test_disease": "soybean brown spot",
+      "test_plant": "Soybean",
+      "class_idx": 84,
+      "md5": "78432c105e1a80d779a86ef3bf89e33e",
+      "matching_train_images": [
+        {
+          "filename": "soybean_brown_spot_Bing_0255.jpg",
+          "disease": "soybean brown spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_downy_mildew_Bing_0101.jpg",
+      "test_disease": "soybean downy mildew",
+      "test_plant": "Soybean",
+      "class_idx": 85,
+      "md5": "920eb6baad499690d1c4785d30fd90be",
+      "matching_train_images": [
+        {
+          "filename": "soybean_downy_mildew_Google_0046.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_downy_mildew_Bing_0107.jpg",
+      "test_disease": "soybean downy mildew",
+      "test_plant": "Soybean",
+      "class_idx": 85,
+      "md5": "4527c30e0ef47bee27f08b9c3d556c5b",
+      "matching_train_images": [
+        {
+          "filename": "soybean_downy_mildew_Google_0233.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_downy_mildew_Bing_0142.jpg",
+      "test_disease": "soybean downy mildew",
+      "test_plant": "Soybean",
+      "class_idx": 85,
+      "md5": "0c62f1deab04a1820347fbb3a4fe88e3",
+      "matching_train_images": [
+        {
+          "filename": "soybean_downy_mildew_Google_0323.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_downy_mildew_Google_0061.jpg",
+      "test_disease": "soybean downy mildew",
+      "test_plant": "Soybean",
+      "class_idx": 85,
+      "md5": "eb3f64e6510878bcbb59d843d74ae149",
+      "matching_train_images": [
+        {
+          "filename": "soybean_downy_mildew_Bing_0076.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_downy_mildew_Google_0302.jpg",
+      "test_disease": "soybean downy mildew",
+      "test_plant": "Soybean",
+      "class_idx": 85,
+      "md5": "85b6050cdb4fe76633cbb6db271bd79b",
+      "matching_train_images": [
+        {
+          "filename": "soybean_downy_mildew_Bing_0027.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        },
+        {
+          "filename": "soybean_downy_mildew_Bing_0145.jpg",
+          "disease": "soybean downy mildew",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_frog_eye_leaf_spot_Baidu_0012.jpg",
+      "test_disease": "soybean frog eye leaf spot",
+      "test_plant": "Soybean",
+      "class_idx": 86,
+      "md5": "78baeebe788fb80f7840451c6c433bcc",
+      "matching_train_images": [
+        {
+          "filename": "soybean_brown_spot_Baidu_0031.jpg",
+          "disease": "soybean brown spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_frog_eye_leaf_spot_Bing_0004.jpg",
+      "test_disease": "soybean frog eye leaf spot",
+      "test_plant": "Soybean",
+      "class_idx": 86,
+      "md5": "378d63b7fd017daa31123d67a7342e16",
+      "matching_train_images": [
+        {
+          "filename": "soybean_frog_eye_leaf_spot_Bing_0039.jpg",
+          "disease": "soybean frog eye leaf spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_frog_eye_leaf_spot_Bing_0089.jpg",
+      "test_disease": "soybean frog eye leaf spot",
+      "test_plant": "Soybean",
+      "class_idx": 86,
+      "md5": "6fdfad681bd4afb709742f56bb4cdc3b",
+      "matching_train_images": [
+        {
+          "filename": "soybean_frog_eye_leaf_spot_Google_0218.jpg",
+          "disease": "soybean frog eye leaf spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_frog_eye_leaf_spot_Bing_0224.jpg",
+      "test_disease": "soybean frog eye leaf spot",
+      "test_plant": "Soybean",
+      "class_idx": 86,
+      "md5": "41d50e294621c1017ee6f707631f28a9",
+      "matching_train_images": [
+        {
+          "filename": "bell_pepper_frogeye_leaf_spot_Bing_0161.jpg",
+          "disease": "bell pepper frogeye leaf spot",
+          "plant": "Bell pepper"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_frog_eye_leaf_spot_Bing_0251.jpg",
+      "test_disease": "soybean frog eye leaf spot",
+      "test_plant": "Soybean",
+      "class_idx": 86,
+      "md5": "28ba80d0919be85d3861f7c97b9aee36",
+      "matching_train_images": [
+        {
+          "filename": "soybean_frog_eye_leaf_spot_Google_0206.jpg",
+          "disease": "soybean frog eye leaf spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "soybean_mosaic_Baidu_0094.jpg",
+      "test_disease": "soybean mosaic",
+      "test_plant": "Soybean",
+      "class_idx": 87,
+      "md5": "296594adcdcf25562d2e68c7814661a8",
+      "matching_train_images": [
+        {
+          "filename": "soybean_mosaic_Baidu_0093.jpg",
+          "disease": "soybean mosaic",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "squash_powdery_mildew_google_0191.jpg",
+      "test_disease": "squash powdery mildew",
+      "test_plant": "Squash",
+      "class_idx": 88,
+      "md5": "1cd2ff6ede3ce960cfe70e5aa5c33fc8",
+      "matching_train_images": [
+        {
+          "filename": "cucumber_powdery_mildew_google_0036.jpg",
+          "disease": "cucumber powdery mildew",
+          "plant": "Cucumber"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_blue_mold_Bing_0107.jpg",
+      "test_disease": "tobacco blue mold",
+      "test_plant": "Tobacco",
+      "class_idx": 91,
+      "md5": "a4ff17867264bd963c5b903ee53efab3",
+      "matching_train_images": [
+        {
+          "filename": "tobacco_blue_mold_Google_0046.jpg",
+          "disease": "tobacco blue mold",
+          "plant": "Tobacco"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_brown_spot_Bing_0003.jpg",
+      "test_disease": "tobacco brown spot",
+      "test_plant": "Tobacco",
+      "class_idx": 92,
+      "md5": "a2f2f56bc1632d3785a0bb6c7f1c08e8",
+      "matching_train_images": [
+        {
+          "filename": "broccoli_alternaria_leaf_spot_Bing_0017.jpg",
+          "disease": "broccoli alternaria leaf spot",
+          "plant": "Broccoli"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_brown_spot_Bing_0004.jpg",
+      "test_disease": "tobacco brown spot",
+      "test_plant": "Tobacco",
+      "class_idx": 92,
+      "md5": "5fcdb0ba07a1fd2f476acb59004b59e9",
+      "matching_train_images": [
+        {
+          "filename": "tobacco_frogeye_leaf_spot_Bing_0034.jpg",
+          "disease": "tobacco frogeye leaf spot",
+          "plant": "Tobacco"
+        },
+        {
+          "filename": "tobacco_frogeye_leaf_spot_Bing_0072.jpg",
+          "disease": "tobacco frogeye leaf spot",
+          "plant": "Tobacco"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_brown_spot_Bing_0044.jpg",
+      "test_disease": "tobacco brown spot",
+      "test_plant": "Tobacco",
+      "class_idx": 92,
+      "md5": "f1812ff3fe76b0bf2d390fb004635a11",
+      "matching_train_images": [
+        {
+          "filename": "broccoli_alternaria_leaf_spot_Bing_0039.jpg",
+          "disease": "broccoli alternaria leaf spot",
+          "plant": "Broccoli"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_brown_spot_Bing_0159.jpg",
+      "test_disease": "tobacco brown spot",
+      "test_plant": "Tobacco",
+      "class_idx": 92,
+      "md5": "a4ff17867264bd963c5b903ee53efab3",
+      "matching_train_images": [
+        {
+          "filename": "tobacco_blue_mold_Google_0046.jpg",
+          "disease": "tobacco blue mold",
+          "plant": "Tobacco"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_brown_spot_Google_0029.jpg",
+      "test_disease": "tobacco brown spot",
+      "test_plant": "Tobacco",
+      "class_idx": 92,
+      "md5": "87c87eb75a49bc996bce8abf14525df4",
+      "matching_train_images": [
+        {
+          "filename": "tobacco_frogeye_leaf_spot_Google_0032.jpg",
+          "disease": "tobacco frogeye leaf spot",
+          "plant": "Tobacco"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_frogeye_leaf_spot_Bing_0000.jpg",
+      "test_disease": "tobacco frogeye leaf spot",
+      "test_plant": "Tobacco",
+      "class_idx": 93,
+      "md5": "be2070b2d63312338ebf624ceb597e7e",
+      "matching_train_images": [
+        {
+          "filename": "soybean_frog_eye_leaf_spot_Bing_0181.jpg",
+          "disease": "soybean frog eye leaf spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "tobacco_frogeye_leaf_spot_Bing_0002.jpg",
+      "test_disease": "tobacco frogeye leaf spot",
+      "test_plant": "Tobacco",
+      "class_idx": 93,
+      "md5": "f30339a621278786d3f23b8280955d70",
+      "matching_train_images": [
+        {
+          "filename": "soybean_frog_eye_leaf_spot_Bing_0217.jpg",
+          "disease": "soybean frog eye leaf spot",
+          "plant": "Soybean"
+        }
+      ]
+    },
+    {
+      "test_image": "tomato_bacterial_leaf_spot_google_0087.jpg",
+      "test_disease": "tomato bacterial leaf spot",
+      "test_plant": "Tomato",
+      "class_idx": 95,
+      "md5": "583c5e18c7af3566230db7987e1dc6a2",
+      "matching_train_images": [
+        {
+          "filename": "cauliflower_alternaria_leaf_spot_google_0056.jpg",
+          "disease": "cauliflower alternaria leaf spot",
+          "plant": "Cauliflower"
+        }
+      ]
+    },
+    {
+      "test_image": "tomato_bacterial_leaf_spot_google_0163.jpg",
+      "test_disease": "tomato bacterial leaf spot",
+      "test_plant": "Tomato",
+      "class_idx": 95,
+      "md5": "22657c457330fbb5b3704c770b085459",
+      "matching_train_images": [
+        {
+          "filename": "tomato_septoria_leaf_spot_google_0052.jpg",
+          "disease": "tomato septoria leaf spot",
+          "plant": "Tomato"
+        }
+      ]
+    },
+    {
+      "test_image": "tomato_early_blight_google_0152.jpg",
+      "test_disease": "tomato early blight",
+      "test_plant": "Tomato",
+      "class_idx": 96,
+      "md5": "5a4c7df6456d1ed038c9641f087c88e2",
+      "matching_train_images": [
+        {
+          "filename": "potato_early_blight_google_0053.jpg",
+          "disease": "potato early blight",
+          "plant": "Potato"
+        }
+      ]
+    },
+    {
+      "test_image": "tomato_septoria_leaf_spot_google_0205.jpg",
+      "test_disease": "tomato septoria leaf spot",
+      "test_plant": "Tomato",
+      "class_idx": 100,
+      "md5": "6ddf926c97edf05f413130a323883b02",
+      "matching_train_images": [
+        {
+          "filename": "tomato_early_blight_google_0260.jpg",
+          "disease": "tomato early blight",
+          "plant": "Tomato"
+        }
+      ]
+    },
+    {
+      "test_image": "tomato_yellow_leaf_curl_virus_4.jpg",
+      "test_disease": "tomato yellow leaf curl virus",
+      "test_plant": "Tomato",
+      "class_idx": 101,
+      "md5": "8bb0b54632ba2dc9ae8ab41e01297471",
+      "matching_train_images": [
+        {
+          "filename": "tomato_mosaic_virus_13.jpg",
+          "disease": "tomato mosaic virus",
+          "plant": "Tomato"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Baidu_0065.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "6928eeace7e6eec5934c07568f1a627b",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Baidu_0291.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Baidu_0281.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "c25a8a58f8bf791c65de0a99aec9cfeb",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Baidu_0403.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Baidu_0310.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "acd223db04eaf4fc09f147d84b99ef18",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Baidu_0202.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Baidu_0368.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "ba191720ddaf7f37465915dbc9bcccd5",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Baidu_0247.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Bing_0023.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "c6400aa17375e95dbda65f0361de547b",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0156.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Bing_0040.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "4d0002bb571c80f56fa6c001dfb43db3",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0229.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Bing_0043.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "df19bb0c0768a5817e116805c38d368c",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0109.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Bing_0206.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "5494136a36f226f8fa99b0b7a333d817",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0014.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Bing_0219.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "c2f7c467272648d7a61cc4ad43cd4693",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Google_0229.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Google_0034.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "2cd4ebe3fecd6f14a12e7275464c0f35",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0052.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_head_scab_Google_0057.jpg",
+      "test_disease": "wheat head scab",
+      "test_plant": "Wheat",
+      "class_idx": 103,
+      "md5": "89b05b35bd63d62468433a357a618c16",
+      "matching_train_images": [
+        {
+          "filename": "wheat_head_scab_Bing_0025.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        },
+        {
+          "filename": "wheat_head_scab_Bing_0097.jpg",
+          "disease": "wheat head scab",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_leaf_rust_Baidu_0088.jpg",
+      "test_disease": "wheat leaf rust",
+      "test_plant": "Wheat",
+      "class_idx": 104,
+      "md5": "f120ed2b3816d189ae7d9c18687b45fc",
+      "matching_train_images": [
+        {
+          "filename": "wheat_leaf_rust_Baidu_0197.jpg",
+          "disease": "wheat leaf rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_leaf_rust_Google_0374.jpg",
+      "test_disease": "wheat leaf rust",
+      "test_plant": "Wheat",
+      "class_idx": 104,
+      "md5": "930c8521af54078ce6441b7c1a91a59c",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Google_0123.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_loose_smut_Bing_0008.jpg",
+      "test_disease": "wheat loose smut",
+      "test_plant": "Wheat",
+      "class_idx": 105,
+      "md5": "5382fed9c4ad8b821f7b7cb08991fffe",
+      "matching_train_images": [
+        {
+          "filename": "wheat_loose_smut_Bing_0104.jpg",
+          "disease": "wheat loose smut",
+          "plant": "Wheat"
+        },
+        {
+          "filename": "wheat_loose_smut_Bing_0129.jpg",
+          "disease": "wheat loose smut",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_loose_smut_Google_0065.jpg",
+      "test_disease": "wheat loose smut",
+      "test_plant": "Wheat",
+      "class_idx": 105,
+      "md5": "ca88076b190cb5c95b0cd6af003c6c7d",
+      "matching_train_images": [
+        {
+          "filename": "wheat_loose_smut_Bing_0224.jpg",
+          "disease": "wheat loose smut",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_powdery_mildew_Bing_0037.jpg",
+      "test_disease": "wheat powdery mildew",
+      "test_plant": "Wheat",
+      "class_idx": 106,
+      "md5": "d36f2a7a52b1699410a29e048261c7f3",
+      "matching_train_images": [
+        {
+          "filename": "wheat_powdery_mildew_Bing_0206.jpg",
+          "disease": "wheat powdery mildew",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_powdery_mildew_Bing_0163.jpg",
+      "test_disease": "wheat powdery mildew",
+      "test_plant": "Wheat",
+      "class_idx": 106,
+      "md5": "e060b288067a2bc379e15406dec7af60",
+      "matching_train_images": [
+        {
+          "filename": "wheat_powdery_mildew_Bing_0059.jpg",
+          "disease": "wheat powdery mildew",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_Google_0016.jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "c95eac0904d163372e04088df60ea7ba",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_google_septoria (6).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_Google_0058.jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "f441776b96f89b410b1fde8f21a1b86f",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_google_septoria (10).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_Google_0174.jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "010baf1a0f09318a09c9b144d4447242",
+      "matching_train_images": [
+        {
+          "filename": "wheat_bacterial_leaf_streak_(black_chaff)_Google_0363.jpg",
+          "disease": "wheat bacterial leaf streak (black chaff)",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_Google_0206.jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "2acad4b70da681219737958028755ae1",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_google_septoria (13).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_Google_0309.jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "84f85931e7fb4ca87b78dbdc8dad1ec6",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_google_septoria (21).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_blotch (22).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "6d10b19dd3807ca6e0d44dae31b53c16",
+      "matching_train_images": [
+        {
+          "filename": "wheat_bacterial_leaf_streak_(black_chaff)_Bing_0006.jpg",
+          "disease": "wheat bacterial leaf streak (black chaff)",
+          "plant": "Wheat"
+        },
+        {
+          "filename": "wheat_septoria_blotch_blotch (100).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_blotch (39).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "d418ef2ec9595184a0b8504ef9803653",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_blotch (43).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_blotch (69).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "ff40171e2eded0bee27e5201cc490269",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_blotch (14).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_blotch (79).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "6d4d6b822f480667d705db83202de30a",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_blotch (33).jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_google_septoria (16).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "1ab861c164a96b4f8fb62c187a2cc34c",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_Google_0296.jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_septoria_blotch_google_septoria (2).jpg",
+      "test_disease": "wheat septoria blotch",
+      "test_plant": "Wheat",
+      "class_idx": 107,
+      "md5": "4a3ad9785b2bda8055ced4c2ca63814e",
+      "matching_train_images": [
+        {
+          "filename": "wheat_septoria_blotch_Google_0178.jpg",
+          "disease": "wheat septoria blotch",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stem_rust_Bing_0002.jpg",
+      "test_disease": "wheat stem rust",
+      "test_plant": "Wheat",
+      "class_idx": 108,
+      "md5": "6977ec637f284b6624b7eeee06efeeb2",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stem_rust_Bing_0078.jpg",
+          "disease": "wheat stem rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stem_rust_Bing_0040.jpg",
+      "test_disease": "wheat stem rust",
+      "test_plant": "Wheat",
+      "class_idx": 108,
+      "md5": "4972af34a503aa4a7f4e52ff0fd731c5",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stem_rust_Google_0035.jpg",
+          "disease": "wheat stem rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stem_rust_Bing_0070.jpg",
+      "test_disease": "wheat stem rust",
+      "test_plant": "Wheat",
+      "class_idx": 108,
+      "md5": "61fa90bb9589bf3789d0b2292d961222",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stem_rust_Google_0028.jpg",
+          "disease": "wheat stem rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stem_rust_Bing_0247.jpg",
+      "test_disease": "wheat stem rust",
+      "test_plant": "Wheat",
+      "class_idx": 108,
+      "md5": "580cba359abbf1b1605d3d9d02271865",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stem_rust_Bing_0167.jpg",
+          "disease": "wheat stem rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Baidu_0106.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "9b9867cd03da61fac8fa5c00f975cd70",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Baidu_0196.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Baidu_0484.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "4d90469dba2726cd98ffdeee61e93da1",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Baidu_0466.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0083.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "a91b08a8c22f3b55386866f0d787a3b8",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Bing_0033.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0084.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "dedd716ac13bcfec6771baefbbfc89c4",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Bing_0027.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0137.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "40bff49ca99fd0ff6c3eed47037477fd",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Bing_0055.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0173.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "272a0041449565fff936657171a14c1f",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Bing_0031.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0224.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "8b76106038fb399b486e6f6bcdcc5670",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Google_0004.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Bing_0225.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "872fe83d02929188f133bd399d882bf7",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Google_0143.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "wheat_stripe_rust_Google_0029.jpg",
+      "test_disease": "wheat stripe rust",
+      "test_plant": "Wheat",
+      "class_idx": 109,
+      "md5": "b3fd02a6d5ec46654303cebcd5cdaeca",
+      "matching_train_images": [
+        {
+          "filename": "wheat_stripe_rust_Bing_0006.jpg",
+          "disease": "wheat stripe rust",
+          "plant": "Wheat"
+        }
+      ]
+    },
+    {
+      "test_image": "zucchini_bacterial_wilt_Bing_0019.jpg",
+      "test_disease": "zucchini bacterial wilt",
+      "test_plant": "Zucchini",
+      "class_idx": 110,
+      "md5": "577ac872590459c7de5f5261376da77a",
+      "matching_train_images": [
+        {
+          "filename": "zucchini_bacterial_wilt_Google_0008.jpg",
+          "disease": "zucchini bacterial wilt",
+          "plant": "Zucchini"
+        }
+      ]
+    },
+    {
+      "test_image": "zucchini_powdery_mildew_Bing_0336.jpg",
+      "test_disease": "zucchini powdery mildew",
+      "test_plant": "Zucchini",
+      "class_idx": 112,
+      "md5": "73bd827c5c50becf0e9a30e8cbf2aaf5",
+      "matching_train_images": [
+        {
+          "filename": "zucchini_powdery_mildew_Bing_0357.jpg",
+          "disease": "zucchini powdery mildew",
+          "plant": "Zucchini"
+        }
+      ]
+    },
+    {
+      "test_image": "zucchini_powdery_mildew_Bing_0337.jpg",
+      "test_disease": "zucchini powdery mildew",
+      "test_plant": "Zucchini",
+      "class_idx": 112,
+      "md5": "bbaec2ee6fe2a1ae206a44a6897d0f32",
+      "matching_train_images": [
+        {
+          "filename": "zucchini_powdery_mildew_Bing_0297.jpg",
+          "disease": "zucchini powdery mildew",
+          "plant": "Zucchini"
+        }
+      ]
+    }
+  ]
+}

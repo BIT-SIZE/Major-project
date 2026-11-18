@@ -14,6 +14,7 @@ from ml.models.deeplabv3plus import DeepLabV3Plus
 from ml.models.segformer import SegFormerB0
 from backend.app.ml.severity import DiseaseSeverityEstimator
 from backend.app.services.classification_service import ClassificationService
+from backend.app.services.supabase_storage import SupabaseStorageService
 from backend.app.core.config import settings
 
 class PredictionService:
@@ -23,12 +24,14 @@ class PredictionService:
       1. Deep Learning Disease Classification (EfficientNet-B0 with Top-3 predictions and host identification).
       2. Pixel-Level Lesion Segmentation (DeepLabV3+, U-Net, or SegFormer-B0).
       3. Quantitative Disease Severity Estimation relative to visible plant foliage.
+      4. Cloud Artifact Storage via Supabase Storage buckets ('crop-images', 'segmentation-masks').
     """
     def __init__(self, checkpoints_dir: str = "models/checkpoints"):
         self.checkpoints_dir = Path(checkpoints_dir)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.severity_estimator = DiseaseSeverityEstimator()
         self.classification_service = ClassificationService()
+        self.storage = SupabaseStorageService()
         self.loaded_models: Dict[str, torch.nn.Module] = {}
         self.active_model_name = settings.DEFAULT_MODEL
 
@@ -94,7 +97,8 @@ class PredictionService:
         self,
         image_bytes: bytes,
         original_filename: str,
-        requested_model: Optional[str] = None
+        requested_model: Optional[str] = None,
+        user_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Executes unified disease classification, lesion segmentation, and severity estimation.
@@ -191,15 +195,76 @@ class PredictionService:
 
         total_latency_ms = round(class_latency_ms + seg_latency_ms, 2)
 
-        # Assemble unified response structure
+        # Cloud Storage Upload (Supabase Storage: crop-images, segmentation-masks)
+        # Standardized path: <user_id>/<pred_id>/<filename> preserves strict user-isolation
+        if user_id:
+            orig_storage_path = f"{user_id}/{pred_id}/orig.jpg"
+            mask_storage_path = f"{user_id}/{pred_id}/mask.png" if mask_filename else None
+            overlay_storage_path = f"{user_id}/{pred_id}/overlay.jpg" if overlay_filename else None
+        else:
+            orig_storage_path = f"predictions/{pred_id}_orig.jpg"
+            mask_storage_path = f"masks/{pred_id}_mask.png" if mask_filename else None
+            overlay_storage_path = f"overlays/{pred_id}_overlay.jpg" if overlay_filename else None
+
+        orig_url = f"/static/predictions/{orig_filename}"
         mask_url = f"/static/predictions/{mask_filename}" if mask_filename else None
         overlay_url = f"/static/predictions/{overlay_filename}" if overlay_filename else None
 
+        storage_metadata = {
+            "backend": "local",
+            "image_path": orig_url,
+            "mask_path": mask_url,
+            "overlay_path": overlay_url
+        }
+
+        if self.storage.is_available:
+            # 1. Upload original image to 'crop-images' bucket
+            orig_upload = self.storage.upload_file(
+                bucket=self.storage.bucket_images,
+                storage_path=orig_storage_path,
+                file_bytes=image_bytes,
+                content_type="image/jpeg"
+            )
+            if orig_upload.get("success"):
+                orig_url = orig_upload.get("signed_url") or orig_url
+                storage_metadata["image_path"] = orig_storage_path
+                storage_metadata["backend"] = "supabase"
+
+            # 2. Upload binary mask to 'segmentation-masks' bucket
+            if mask_filename and seg_model is not None:
+                mask_success, mask_buf = cv2.imencode(".png", mask_vis)
+                if mask_success:
+                    mask_upload = self.storage.upload_file(
+                        bucket=self.storage.bucket_masks,
+                        storage_path=mask_storage_path,
+                        file_bytes=mask_buf.tobytes(),
+                        content_type="image/png"
+                    )
+                    if mask_upload.get("success"):
+                        mask_url = mask_upload.get("signed_url") or mask_url
+                        storage_metadata["mask_path"] = mask_storage_path
+
+            # 3. Upload overlay to 'segmentation-masks' bucket
+            if overlay_filename and seg_model is not None:
+                overlay_success, overlay_buf = cv2.imencode(".jpg", overlay_bgr)
+                if overlay_success:
+                    overlay_upload = self.storage.upload_file(
+                        bucket=self.storage.bucket_masks,
+                        storage_path=overlay_storage_path,
+                        file_bytes=overlay_buf.tobytes(),
+                        content_type="image/jpeg"
+                    )
+                    if overlay_upload.get("success"):
+                        overlay_url = overlay_upload.get("signed_url") or overlay_url
+                        storage_metadata["overlay_path"] = overlay_storage_path
+
+        # Assemble unified response structure
         response_dict = {
             "prediction_id": pred_id,
             "timestamp": timestamp_str,
             "status": "success",
-            "original_image_url": f"/static/predictions/{orig_filename}",
+            "original_image_url": orig_url,
+            "storage_metadata": storage_metadata,
 
             # Classification component
             "classification": {

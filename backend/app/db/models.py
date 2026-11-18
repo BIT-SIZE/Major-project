@@ -9,6 +9,8 @@ class PredictionRecord(Base):
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     timestamp = Column(DateTime, default=lambda: datetime.now(timezone.utc), index=True)
     original_filename = Column(String(255), nullable=True)
+    crop_id = Column(String(36), nullable=True, index=True)
+    user_id = Column(String(36), nullable=True, index=True)
     original_image_path = Column(String(512), nullable=False)
     overlay_image_path = Column(String(512), nullable=True)
     mask_image_path = Column(String(512), nullable=True)

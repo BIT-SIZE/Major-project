@@ -22,6 +22,7 @@ def parse_args():
     parser.add_argument("--max-test-samples", type=int, default=100)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--reports-dir", type=str, default="reports/evaluation")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for deterministic class-aware sampling")
     return parser.parse_args()
 
 def main():
@@ -55,7 +56,8 @@ def main():
     data = get_classification_dataloaders(
         root_dir=str(ROOT_DIR),
         batch_size=args.batch_size,
-        max_test_samples=args.max_test_samples
+        max_test_samples=args.max_test_samples,
+        seed=args.seed
     )
     test_loader = data["test"]
 

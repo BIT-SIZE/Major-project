@@ -1,4 +1,25 @@
+import { getAuthToken } from './supabase'
+
 const BASE_URL = '' // Proxied by Vite to http://127.0.0.1:8000
+
+/**
+ * Fetch wrapper that attaches the Authorization: Bearer <token> header
+ * at request time from the active Supabase session.
+ * Preserves multipart/form-data boundary handling and all existing fetch options.
+ */
+async function authFetch(url, options = {}) {
+  const token = await getAuthToken()
+  const headers = new Headers(options.headers || {})
+
+  if (token) {
+    headers.set('Authorization', `Bearer ${token}`)
+  }
+
+  return fetch(url, {
+    ...options,
+    headers
+  })
+}
 
 export async function fetchHealth() {
   const res = await fetch(`${BASE_URL}/api/health`)
@@ -25,7 +46,7 @@ export async function predictImage(file, modelName = null) {
     formData.append('model_name', modelName)
   }
 
-  const res = await fetch(`${BASE_URL}/api/predict`, {
+  const res = await authFetch(`${BASE_URL}/api/predict`, {
     method: 'POST',
     body: formData
   })
@@ -42,7 +63,7 @@ export async function classifyImage(file) {
   const formData = new FormData()
   formData.append('file', file)
 
-  const res = await fetch(`${BASE_URL}/api/classify`, {
+  const res = await authFetch(`${BASE_URL}/api/classify`, {
     method: 'POST',
     body: formData
   })
@@ -61,19 +82,19 @@ export async function fetchPredictionHistory(page = 1, limit = 20, modelName = n
   if (category) params.append('severity_category', category)
   if (diseaseName) params.append('disease_name', diseaseName)
 
-  const res = await fetch(`${BASE_URL}/api/history?${params.toString()}`)
+  const res = await authFetch(`${BASE_URL}/api/history?${params.toString()}`)
   if (!res.ok) throw new Error('Failed to fetch prediction history')
   return res.json()
 }
 
 export async function fetchPredictionDetail(id) {
-  const res = await fetch(`${BASE_URL}/api/history/${id}`)
+  const res = await authFetch(`${BASE_URL}/api/history/${id}`)
   if (!res.ok) throw new Error('Failed to fetch prediction detail')
   return res.json()
 }
 
 export async function deletePrediction(id) {
-  const res = await fetch(`${BASE_URL}/api/history/${id}`, {
+  const res = await authFetch(`${BASE_URL}/api/history/${id}`, {
     method: 'DELETE'
   })
   if (!res.ok) throw new Error('Failed to delete prediction')
@@ -81,7 +102,7 @@ export async function deletePrediction(id) {
 }
 
 export async function fetchAnalyticsSummary() {
-  const res = await fetch(`${BASE_URL}/api/analytics/summary`)
+  const res = await authFetch(`${BASE_URL}/api/analytics/summary`)
   if (!res.ok) throw new Error('Failed to fetch analytics')
   return res.json()
 }

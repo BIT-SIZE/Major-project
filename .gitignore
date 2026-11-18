@@ -56,8 +56,13 @@ data/val/
 data/test/
 
 # Model Checkpoints
-# Exclude duplicate intermediate checkpoints to stay under GitHub 2GB free quota:
+# Exclude duplicate intermediate checkpoints and backups to stay under GitHub 2GB free quota:
 models/checkpoints/*_last.pth
+models/checkpoints/backups/
+models/checkpoints/segmentation_audit/
+models/checkpoints/efficientnet_b0_plantseg_v2/*.pth
+reports/training/backups/
+scratch/
 # The best models (*_best.pth) are tracked via Git LFS!
 
 # IDE & OS

@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from backend.app.db.database import get_db
 from backend.app.db.repository import PredictionRepository
 from backend.app.schemas.predictions import PredictionHistoryListResponse, PredictionHistoryItem
+from backend.app.core.security import get_current_user, AuthenticatedUser
 
 router = APIRouter()
 
@@ -26,17 +27,30 @@ def get_prediction_history(
     model_name: Optional[str] = None,
     severity_category: Optional[str] = None,
     disease_name: Optional[str] = None,
+    current_user: AuthenticatedUser = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
     repo = PredictionRepository(db)
     skip = (page - 1) * limit
-    total = repo.count(model_name=model_name, severity_category=severity_category, disease_name=disease_name)
-    records = repo.get_all(skip=skip, limit=limit, model_name=model_name, severity_category=severity_category, disease_name=disease_name)
+    total = repo.count(
+        model_name=model_name,
+        severity_category=severity_category,
+        disease_name=disease_name,
+        user_id=current_user.id
+    )
+    records = repo.get_all(
+        skip=skip,
+        limit=limit,
+        model_name=model_name,
+        severity_category=severity_category,
+        disease_name=disease_name,
+        user_id=current_user.id
+    )
 
     items = [
         PredictionHistoryItem(
             id=r.id,
-            timestamp=r.timestamp.strftime("%Y-%m-%d %H:%M:%S") if r.timestamp else "",
+            timestamp=r.timestamp.strftime("%Y-%m-%d %H:%M:%S") if hasattr(r.timestamp, "strftime") else str(r.timestamp or ""),
             original_filename=r.original_filename,
             original_image_url=r.original_image_path,
             overlay_image_url=r.overlay_image_path,
@@ -59,15 +73,19 @@ def get_prediction_history(
 
 
 @router.get("/history/{prediction_id}", response_model=PredictionHistoryItem)
-def get_prediction_detail(prediction_id: str, db: Session = Depends(get_db)):
+def get_prediction_detail(
+    prediction_id: str,
+    current_user: AuthenticatedUser = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     repo = PredictionRepository(db)
-    r = repo.get_by_id(prediction_id)
+    r = repo.get_by_id(prediction_id, user_id=current_user.id)
     if not r:
         raise HTTPException(status_code=404, detail="Prediction record not found.")
 
     return PredictionHistoryItem(
         id=r.id,
-        timestamp=r.timestamp.strftime("%Y-%m-%d %H:%M:%S") if r.timestamp else "",
+        timestamp=r.timestamp.strftime("%Y-%m-%d %H:%M:%S") if hasattr(r.timestamp, "strftime") else str(r.timestamp or ""),
         original_filename=r.original_filename,
         original_image_url=r.original_image_path,
         overlay_image_url=r.overlay_image_path,
@@ -86,9 +104,13 @@ def get_prediction_detail(prediction_id: str, db: Session = Depends(get_db)):
 
 
 @router.delete("/history/{prediction_id}")
-def delete_prediction(prediction_id: str, db: Session = Depends(get_db)):
+def delete_prediction(
+    prediction_id: str,
+    current_user: AuthenticatedUser = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
     repo = PredictionRepository(db)
-    record = repo.get_by_id(prediction_id)
+    record = repo.get_by_id(prediction_id, user_id=current_user.id)
     if not record:
         raise HTTPException(status_code=404, detail="Prediction record not found.")
 
@@ -104,5 +126,5 @@ def delete_prediction(prediction_id: str, db: Session = Depends(get_db)):
                 except OSError:
                     pass
 
-    repo.delete(prediction_id)
+    repo.delete(prediction_id, user_id=current_user.id)
     return {"status": "success", "message": f"Prediction {prediction_id} deleted successfully."}
